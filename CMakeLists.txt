@@ -1,16 +1,12 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(guess_the_number)
+project(guess_the_number CXX)
 
 add_executable(guess_the_number
 			  guess_the_number.cpp
 			  random_value.cpp
-			  random_value.h
 			  file_worker.cpp
-			  file_worker.h
 			  game_back.cpp
-			  game_back.h
-
 )
 
 set_target_properties(guess_the_number PROPERTIES 

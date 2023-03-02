@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 
-int read_the_file(std::string high_scores_filename){
+int read_the_file(const std::string &high_scores_filename){
 	std::ifstream in_file{high_scores_filename};
 	if (!in_file.is_open()) {
 		std::cout << "Failed to open file for read: " << high_scores_filename << "!" << std::endl;
@@ -33,7 +33,7 @@ int read_the_file(std::string high_scores_filename){
 }
 
 
-int write_in_file(std::string user_name, int score, std::string high_scores_filename){
+int write_in_file(int score, const std::string& user_name, const std::string& high_scores_filename){
 		// We should open the output file in the append mode - we don't want
 		// to erase previous results.
 		std::ofstream out_file{high_scores_filename, std::ios_base::app};

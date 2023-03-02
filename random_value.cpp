@@ -4,8 +4,8 @@
 #include <ctime>
 
 int imagine_number(int upper_limit = 0) {
-	if (upper_limit == 0)
-	upper_limit = 100;
+	if (upper_limit == 0){
+	upper_limit = 100;}
 
 	std::srand(static_cast<unsigned int>(std::time(nullptr))); // use current time as seed for random generator
 
